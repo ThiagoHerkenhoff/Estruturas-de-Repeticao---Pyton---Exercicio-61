@@ -1,0 +1,15 @@
+# - 61 - Faça um programa que calcule o maior número palíndromo feito a partir do produto de dois
+# números de 3 digitos. Ex: O maior palíndromo feito a partir do produto de dois números
+# de dois dígitos é 9009 = 91*99.
+
+maior_palindromo = 0
+
+# Loop para gerar todos os produtos de dois números de 3 dígitos
+for i in range(100, 1000):
+    for j in range(100, 1000):
+        produto = i * j
+        # Verifica se o produto é um palíndromo e se é maior que o maior palíndromo atual
+        if str(produto) == str(produto)[::-1] and produto > maior_palindromo:
+            maior_palindromo = produto
+
+print("O maior palíndromo feito a partir do produto de dois números de 3 dígitos é:", maior_palindromo)
